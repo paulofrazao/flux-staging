@@ -1,0 +1,21 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: gitops-demo
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: helm
+      sourceRef:
+        kind: GitRepository
+        name: gitops-demo
+  interval: 30s
+  targetNamespace: staging
+  values:
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      name: colour-gitops
+
