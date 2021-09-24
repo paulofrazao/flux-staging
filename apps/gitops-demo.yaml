@@ -14,8 +14,6 @@ spec:
   interval: 30s
   targetNamespace: staging
   values:
-    apiVersion: v1
-    kind: Namespace
-    metadata:
-      name: colour-gitops
+    image:
+      tag: 2.9.9
 
