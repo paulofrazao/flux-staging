@@ -16,4 +16,6 @@ spec:
   values:
     image:
       tag: 2.9.9
+    ingress:
+      host: staging.gitops-toolkit.weaveworks.tech
 
